@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597128019581",
+    "project_id": "leafy-antonym-392902",
+    "storage_bucket": "leafy-antonym-392902.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597128019581:android:241240f93ad4a307de3b14",
+        "android_client_info": {
+          "package_name": "com.example.live_tracking_map"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMBuaM9-dbGAz_LKGVhGt1SRzIk2d3cQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
