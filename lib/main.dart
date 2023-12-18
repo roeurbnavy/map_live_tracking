@@ -110,6 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 return ListView.builder(
                   itemCount: snapshot.data?.docs.length,
                   itemBuilder: (ctx, index) {
+                    // print(snapshot.data!.docs[index].get('name'));
                     return ListTile(
                       title:
                           Text(snapshot.data!.docs[index]['name'].toString()),
@@ -149,7 +150,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _getLocation() async {
-    print("click");
     try {
       LocationData _res = await _location.getLocation();
       await FirebaseFirestore.instance.collection('location').doc('user1').set({
@@ -185,12 +185,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _requestPermissions() async {
     var status = await Permission.location.request();
-    if (status.isGranted) {
-      print("done");
-    } else if (status.isDenied) {
+    if (status.isDenied) {
       _requestPermissions();
+    } else if (status.isPermanentlyDenied) {
+      openAppSettings();
     }
-    // else if(status.isPermanentlyDenied){
-    // }
   }
 }
