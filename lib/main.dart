@@ -7,9 +7,11 @@ import 'package:live_tracking_map/map.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location/location.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
